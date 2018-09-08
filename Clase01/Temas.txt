@@ -1,2 +1,13 @@
 1.- Instalación de GIT
 2.- Clonar Repositorio
+3.- Introducción a Oracle
+4.- SQL * Plus
+5.- Conexión Remota
+6.- SQL Developer
+7.- Esquemas de Trabajo
+8.- Consultas a una tabla
+9.- Operadores de Comparación
+10.- Operadores Lógicos
+
+
+

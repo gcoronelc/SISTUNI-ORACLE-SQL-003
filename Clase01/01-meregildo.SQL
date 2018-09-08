@@ -1,0 +1,1 @@
+select cur_id, cur_nombre, cur_precio, cur_profesor  from educa.curso
