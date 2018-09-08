@@ -33,6 +33,14 @@ from eureka.cliente;
 
 
 
+SELECT * FROM EUREKA.MOVIMIENTO
+WHERE CHR_CUENCODIGO = '00100001';
+
+select substr('gustavo',2,3) from dual;
+
+
+
+
 
 
 
