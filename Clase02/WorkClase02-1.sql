@@ -164,9 +164,137 @@ SELECT TO_CHAR(HIREDATE,'DD-MM-YYYY') FECHA FROM SCOTT.EMP;
 
 
 
+-- ================================================
+-- FUNCIONES AGREGADAS
+-- ================================================
+
+/*
+
+  Forman parte de la sentencia SELECT.
+  Se aplican a las tablas.
+
+  1.- COUNT
+  2.- SUM
+  3.- AVG
+  4.- MAX
+  5.- MIN
+  
+*/
+
+/* Ejemplo 1 */
+-- Cantidad de filas en la tabla.
+
+SELECT count(*) FROM recursos.empleado;
+
+-- Resultado: 22 Filas
+
+
+/* Ejemplo 2 */
+
+SELECT count(idempleado) FROM recursos.empleado;
+
+-- Resultado: 22 Filas
+
+
+/* Ejemplo 3 */
+
+SELECT count(comision) FROM recursos.empleado;
+
+-- Resultado: 10 Filas
+
+
+/* Ejemplo 4 */
+
+SELECT sum(sueldo) FROM recursos.empleado;
+
+-- Planilla total: 163,300.00
+
+
+/* Ejemplo 5 */
+
+SELECT * FROM recursos.departamento;
+
+
+SELECT sum(sueldo) FROM recursos.empleado
+WHERE iddepartamento = 102;
+
+-- Planilla DEALLOCATE Investigación: 41,800.00
 
 
 
+/* DISTINCT */
 
 
+SELECT COUNT( DISTINCT IDDEPARTAMENTO ) FROM RECURSOS.EMPLEADO;
+
+-- Respuesta: 5
+
+
+/* Varios calculos */
+
+SELECT 
+  count(*) empleados,
+  sum(sueldo) Planilla,
+  avg(sueldo) "Sueldo Promedio"
+FROM recursos.empleado
+WHERE iddepartamento = 102;
+
+
+-- =============================================
+-- AGRUPACIÓN DE DATOS: GROUP BY 
+-- =============================================
+
+/*
+
+Se utiliza para hacer resumen de datos en base
+a grupos de registros.
+
+Sintaxis:
+
+SELECT col1, col2, ..., func1(), func2(), ..
+FROM tabla
+WHERE filtro
+GROUP BY col1, col2, ....
+
+
+
+*/
+
+SELECT 
+  iddepartamento, 
+  count(*) emps,
+  sum(sueldo) planilla
+FROM recursos.empleado
+GROUP BY iddepartamento;
+
+
+-- ======================================
+-- FILTRO DE GRUPOS: HAVING
+-- ======================================
+
+/*
+
+Sintaxis:
+
+HAVING filtro_de_grupo
+
+Se crea utilizando las funciones agregadas.
+
+*/
+
+SELECT 
+  iddepartamento, 
+  count(*) emps,
+  sum(sueldo) planilla
+FROM recursos.empleado
+GROUP BY iddepartamento;
+
+
+SELECT 
+  iddepartamento, 
+  count(*) emps,
+  sum(sueldo) planilla
+FROM recursos.empleado
+GROUP BY iddepartamento
+HAVING count(*) > 5;
 

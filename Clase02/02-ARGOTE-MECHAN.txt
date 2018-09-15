@@ -1,0 +1,40 @@
+SELECT sum(SAL+nvl(comm,0)) comision FROM SCOTT.EMP WHERE DEPTNO = '30' 
+SELECT sum(SAL+nvl(comm,0)) sincomision FROM SCOTT.EMP WHERE DEPTNO = '30' 
+
+
+
+/*****2******/
+
+SELECT MAX(SAL),MIN(SAL) FROM SCOTT.EMP WHERE DEPTNO = '30'
+SELECT MAX(SUELDO),MIN(SUELDO)  FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO = '103'
+
+
+/*****3******/
+SELECT avg(SAL) FROM SCOTT.EMP WHERE DEPTNO = '30'
+SELECT avg(SUELDO)  FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO = '103'
+
+
+
+/*****4******/
+SELECT COUNT(*) FROM SCOTT.EMP WHERE DEPTNO = '30'
+
+SELECT COUNT(*) FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO = '103'
+
+/************5**************/
+
+SELECT sum(SAL) sincomision,sum(SAL+nvl(comm,0)) concomision FROM SCOTT.EMP WHERE DEPTNO = '30' 
+
+
+
+SELECT sum(SUELDO) sincomision ,sum(SUELDO+nvl(comision,0)) concomision  
+FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO = '103' 
+
+/************6**************/
+
+SELECT sum(cur_matriculados),sum((cur_vacantes*cur_precio))  proyectado FROM educa.curso
+
+/************7**************/
+select sum((cur_matriculados*cur_precio)) FROM educa.curso WHERE CUR_NOMBRE LIKE 'SQL Server Administración'
+
+SELECT * FROM DEPARTAMENTO
+SELECT * FROM DEPT
