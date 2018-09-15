@@ -1,0 +1,27 @@
+======================================
+CLASE 01
+======================================
+
+1.- Instalación de GIT
+2.- Clonar Repositorio
+3.- Introducción a Oracle
+4.- SQL * Plus
+5.- Conexión Remota
+6.- SQL Developer
+7.- Esquemas de Trabajo
+8.- Consultas a una tabla
+9.- Operadores de Comparación
+10.- Operadores Lógicos
+
+======================================
+CLASE 02
+======================================
+
+
+11.- Operadores LIKE, BETWEEN, IN, IS NULL
+12.- ORDENAMIENTO DEL CONJUNTO DE RESULTADOS
+13.- MANIPULACIÓN DE VALORES NULOS
+
+
+
+

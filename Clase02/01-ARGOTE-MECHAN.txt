@@ -1,0 +1,66 @@
+/*
+
+2.Desarrollar una sentencia SELECT que permita 
+consultar los empleados 
+que su nombre finaliza con la letra "O". Esquema HR.*/
+
+SELECT * FROM RECURSOS.EMPLEADO
+WHERE UPPER(NOMBRE)  LIKE '%O'
+
+/*
+3.Desarrollar una sentencia SELECT que permita 
+consultar los empleados 
+que su apellido tiene en la segunda posición 
+la letra "A" o la letra "O". Esquemas SCOTT y HR.*/
+
+SELECT * FROM SCOTT.EMP
+WHERE ENAME LIKE '_A%'
+UNION
+SELECT * FROM SCOTT.EMP
+WHERE ENAME LIKE '_O%';
+
+
+
+/****/
+
+SELECT * FROM RECURSOS.EMPLEADO
+WHERE UPPER(NOMBRE) LIKE '_A%'
+UNION
+SELECT * FROM RECURSOS.EMPLEADO
+WHERE UPPER(NOMBRE) LIKE '_O%'
+
+
+/*
+4.Desarrollar una sentencia SELECT que 
+permita averiguar que empleados 
+tienen un sueldo mayor de 3,000.0 y menor de 10,000.0. 
+Esquemas SCOTT y HR.
+*/
+
+SELECT * FROM SCOTT.EMP
+WHERE SAL BETWEEN 3000 AND 10000;
+
+SELECT * FROM RECURSOS.EMPLEADO
+WHERE SUELDO BETWEEN 3000 AND 10000;
+
+/*
+5.Desarrollar una sentencia SELECT que 
+permita averiguar quiénes son los empleados 
+de los departamentos de contabilidad, 
+recursos humanos y ventas. Esquemas SCOTT y HR.
+*/
+
+SELECT * FROM SCOTT.EMP  WHERE DEPTNO IN ('30','10','20');
+
+SELECT * FROM RECURSOS.EMPLEADO
+WHERE IDDEPARTAMENTO IN ('101','106','103');
+
+
+
+6.Consultar los empleados del departamento de 
+ventas que no tienen comisión. Esquemas SCOTT y HR;
+
+SELECT * FROM SCOTT.EMP WHERE COMM IS NULL;
+
+SELECT * FROM RECURSOS.EMPLEADO WHERE COMISION IS NULL;
+
