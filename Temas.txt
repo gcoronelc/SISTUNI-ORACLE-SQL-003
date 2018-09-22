@@ -31,8 +31,18 @@ CLASE 02
 CLASE 03
 ======================================
 
+19.- Consultas Multitablas (JOIN)
+20.- OUTER JOIN
+21.- WITH
+22.- SELF-JOIN
+23.- CONJUNTOS
+24.- CORRELACION
 
-19. 
+
+
+
+
+
 
 
 

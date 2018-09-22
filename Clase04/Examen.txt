@@ -1,0 +1,7 @@
+
+Desarrollar un modelo de datos con minimo 6 tablas.
+
+Tema Libre.
+
+Proponer 20 requerimientos de datos (consultas) con su respectiva solución.
+
