@@ -1,0 +1,19 @@
+
+/* Ejercicio 2: Se necesita un reporte resumen de las matriculas y pago , las columnas deben considerar :
+- codigo , nombre del curso.
+- cant matriculados 
+- imp comprometido a pagar x alumno (COMPROMISO)
+- imp pagado 
+
+DEL ESQUEME EDUCA */
+
+
+SELECT MA.CUR_ID CODCURSO,CU.CUR_NOMBRE CURSO,CU.CUR_MATRICULADOS ALUMNOS,SUM(MA.MAT_PRECIO*MA.MAT_CUOTAS) COMPROMISO,SUM(COALESCE(PA.PAG_IMPORTE,0)) RECAUDADO FROM EDUCA.MATRICULA  MA 
+LEFT JOIN EDUCA.PAGO PA ON MA.ALU_ID = PA.ALU_ID AND MA.CUR_ID=PA.CUR_ID
+JOIN CURSO CU ON CU.CUR_ID = MA.CUR_ID
+GROUP BY MA.CUR_ID,CU.CUR_NOMBRE,CU.CUR_MATRICULADOS
+ORDER BY MA.CUR_ID ASC;
+
+SELECT * FROM MATRICULA;
+
+SELECT * FROM pago;
