@@ -41,6 +41,22 @@ CLASE 03
 
 
 
+======================================
+CLASE 04
+======================================
+25.- Sentencia DML: INSERT, UPDATE y DELETE
+26.- Transacciones: Caso Practico
+27.- Esquemas
+28.- Vistas
+29.- Tablas Particionadas
+
+
+
+
+
+
+
+
 
 
 
